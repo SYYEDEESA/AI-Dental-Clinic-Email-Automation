@@ -1,0 +1,175 @@
+{
+  "name": "Error Workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "3b83be74-6d57-4d16-b34a-0b00d2186088",
+      "name": "Error Trigger"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1ygkYNbGXg1f-lgbgG0rU2bOqexlQxaNBdE2aMhu02_I",
+          "mode": "list",
+          "cachedResultName": "Error LogTi",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ygkYNbGXg1f-lgbgG0rU2bOqexlQxaNBdE2aMhu02_I/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1ygkYNbGXg1f-lgbgG0rU2bOqexlQxaNBdE2aMhu02_I/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Node": "={{ $json.execution.lastNodeExecuted }}",
+            "Error": "={{ $json.execution.error }}",
+            "Workflow": "={{ $json.workflow }}",
+            "Timestamp": "={{ $now.toISO() }}",
+            "Execution ID": "={{ $json.execution.id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Timestamp",
+              "displayName": "Timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Execution ID",
+              "displayName": "Execution ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Error",
+              "displayName": "Error",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Node",
+              "displayName": "Node",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Workflow",
+              "displayName": "Workflow",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        192,
+        0
+      ],
+      "id": "e8abab7b-5cad-4731-b1de-45c385d6d1a2",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "KNSa0GyYCuHerySH",
+          "name": "Google Sheets account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "arsenaleesa@gmail.com",
+        "subject": "Workflow failure",
+        "message": "=\nWorkflow: {{$json.workflow.name}}  \n\nFailed Node: {{$json.execution.lastNodeExecuted}} \n\nError: {{$json.execution.error.message}} \n\nExecution ID: {{$json.execution.id}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        400,
+        0
+      ],
+      "id": "00afb692-1140-4177-ab7f-3306b2dd9cca",
+      "name": "Send a message",
+      "webhookId": "04decc99-4dfa-45c9-9e77-6d6f0aff9386",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Jd6JczK4nBPvDpHV",
+          "name": "Gmail account 7"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "e1b344ca-0408-425e-a224-6c1bcc4bcd8f",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "9a1da4d72ad7254e9f5825a8aa68647f6d7f7d8d225f4948376ef179587fb3b3"
+  },
+  "nodeGroups": [],
+  "id": "C8tKVAKDM6cOb5Of",
+  "tags": []
+}
