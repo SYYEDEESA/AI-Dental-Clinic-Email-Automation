@@ -1,0 +1,14 @@
+Subject: Alternative Appointment Times
+
+Hello {{patient_name}},
+
+The appointment time you requested is not available.
+
+The following alternative slots are currently available:
+
+{{formatted_alternative_slots}}
+
+Please reply with your preferred option. Availability may change until the clinic confirms the appointment.
+
+Kind regards,
+{{clinic_name}}
