@@ -60,59 +60,21 @@ Gmail Trigger
             -> General enquiry / FAQ
             -> Spam
 ```
-# 📸 Workflow Gallery
+## 📸 Workflow Showcase
 
-Explore the key stages of the AI Dental Clinic Email Automation workflow.
+### Complete Workflow
 
----
-
-## 1. Complete Workflow
-
-The complete end-to-end n8n automation, beginning with Gmail email intake and ending with automated responses, Google Calendar scheduling, and Google Sheets logging.
+The complete n8n automation handles Gmail intake, AI classification, confidence-based routing, appointment scheduling, cancellations, FAQ enquiries, job enquiries, spam handling, Google Calendar integration, Google Sheets logging, and internal notifications.
 
 ![Complete Workflow](screenshots/main-workflow.png)
 
 ---
 
-## 2. Appointment Scheduling
+### Appointment Scheduling Automation
 
-The appointment scheduling branch extracts patient information, verifies calendar availability, creates appointments, and sends confirmation emails.
+This branch extracts appointment details, checks Google Calendar availability, creates the appointment when the slot is available, and generates alternative options when the requested time is unavailable.
 
-![Appointment Scheduling](screenshots/appointment-branch.png)
-
----
-
-## 3. Google Calendar Integration
-
-The workflow checks appointment availability before scheduling and prevents booking conflicts.
-
-![Google Calendar Integration](screenshots/calendar-integration.png)
-
----
-
-## 4. Alternative Appointment Slots
-
-If the requested appointment time is unavailable, the workflow automatically suggests alternative available slots.
-
-![Alternative Appointment Slots](screenshots/alternative-slot-generation.png)
-
----
-
-## 5. Human Review Routing
-
-Emails with low AI confidence are routed for manual review instead of being processed automatically.
-
-![Human Review Routing](screenshots/human-review-routing.png)
-
----
-
-## 6. Error Workflow
-
-Dedicated error-handling workflow for monitoring failures and improving automation reliability.
-
-![Error Workflow](screenshots/error-workflow.png)
-
-
+![Appointment Scheduling Automation](screenshots/appointment-branch.png)
 ## Appointment Branch
 
 ```text
