@@ -60,6 +60,58 @@ Gmail Trigger
             -> General enquiry / FAQ
             -> Spam
 ```
+# 📸 Workflow Gallery
+
+Explore the key stages of the AI Dental Clinic Email Automation workflow.
+
+---
+
+## 1. Complete Workflow
+
+The complete end-to-end n8n automation, beginning with Gmail email intake and ending with automated responses, Google Calendar scheduling, and Google Sheets logging.
+
+![Complete Workflow](screenshots/main-workflow.png)
+
+---
+
+## 2. Appointment Scheduling
+
+The appointment scheduling branch extracts patient information, verifies calendar availability, creates appointments, and sends confirmation emails.
+
+![Appointment Scheduling](screenshots/appointment-branch.png)
+
+---
+
+## 3. Google Calendar Integration
+
+The workflow checks appointment availability before scheduling and prevents booking conflicts.
+
+![Google Calendar Integration](screenshots/calendar-integration.png)
+
+---
+
+## 4. Alternative Appointment Slots
+
+If the requested appointment time is unavailable, the workflow automatically suggests alternative available slots.
+
+![Alternative Appointment Slots](screenshots/alternative-slot-generation.png)
+
+---
+
+## 5. Human Review Routing
+
+Emails with low AI confidence are routed for manual review instead of being processed automatically.
+
+![Human Review Routing](screenshots/human-review-routing.png)
+
+---
+
+## 6. Error Workflow
+
+Dedicated error-handling workflow for monitoring failures and improving automation reliability.
+
+![Error Workflow](screenshots/error-workflow.png)
+
 
 ## Appointment Branch
 
