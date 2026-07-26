@@ -1,3 +1,12 @@
+
+
+<p align="center">
+  <img src="assets/banner.png" alt="AI Dental Clinic Email Automation Banner">
+</p>
+
+
+
+
 # AI Dental Clinic Email Automation
 
 A production-ready n8n workflow that acts as a 24/7 AI-powered email receptionist for dental clinics.
