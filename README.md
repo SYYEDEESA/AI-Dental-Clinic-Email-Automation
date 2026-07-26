@@ -137,6 +137,30 @@ Store spam record
 - Retry-on-fail settings
 - Centralized error logging workflow
 
+- # 💼 Business Value
+
+This automation is designed to reduce the administrative workload of dental clinics by automating repetitive email-based tasks.
+
+### Benefits
+
+- 📧 Automatically classifies incoming emails using AI.
+- 📅 Schedules appointments without manual intervention.
+- 🔄 Handles appointment cancellations efficiently.
+- ⏰ Suggests alternative appointment slots when schedules are full.
+- 📋 Logs appointment and enquiry data into Google Sheets.
+- 🤖 Answers frequently asked questions automatically.
+- 👨‍💼 Routes uncertain emails for human review.
+- 🚫 Separates spam from genuine patient enquiries.
+
+### Business Impact
+
+- Reduce receptionist workload
+- Faster patient response times
+- Fewer scheduling conflicts
+- Improved appointment management
+- Better record keeping
+- Scalable clinic operations
+
 ## Technology Stack
 
 - n8n
