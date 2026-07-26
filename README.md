@@ -137,6 +137,19 @@ Store spam record
 - Retry-on-fail settings
 - Centralized error logging workflow
 
+- # ❗ Business Problem
+
+Dental clinics receive a continuous stream of emails related to appointment requests, cancellations, job applications, and general enquiries. Managing these emails manually can lead to:
+
+- Delayed responses to patients
+- Double-booked or conflicting appointments
+- Increased administrative workload
+- Inconsistent handling of enquiries
+- Missed opportunities due to human error
+- Time spent on repetitive administrative tasks
+
+As patient volume increases, these challenges reduce operational efficiency and negatively impact the patient experience.
+
 - # 💼 Business Value
 
 This automation is designed to reduce the administrative workload of dental clinics by automating repetitive email-based tasks.
