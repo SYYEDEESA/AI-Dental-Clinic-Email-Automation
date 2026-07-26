@@ -31,6 +31,12 @@ A production-ready n8n workflow that acts as a 24/7 AI-powered email receptionis
 - Dedicated error workflow
 - Retry-on-failure settings for AI nodes
 
+- ## 🏗️ System Architecture
+
+This diagram provides a high-level overview of how the AI Dental Clinic Email Automation workflow processes incoming emails and routes them through specialized automation branches.
+
+![System Architecture](assets/workflow-architecture.png)
+
 ## Main Workflow
 
 ```text
