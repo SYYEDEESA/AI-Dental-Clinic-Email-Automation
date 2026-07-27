@@ -50,8 +50,8 @@ This diagram provides a high-level overview of how the AI Dental Clinic Email Au
 
 ```text
 Gmail Trigger
+  -> Get Full Email Message
   -> Email Classifier
-  -> Confidence Splitter
        -> Low confidence: Human review notification
        -> High confidence: Switch
             -> Appointment
