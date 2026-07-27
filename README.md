@@ -78,7 +78,8 @@ This branch extracts appointment details, checks Google Calendar availability, c
 ## Appointment Branch
 
 ```text
-Appointment Details Extractor
+Get Full Email Message
+  -> Appointment Details Extractor
   -> Missing Details Check
        -> Missing: Ask sender for more information
        -> Complete: Check Google Calendar
