@@ -1,22 +1,38 @@
 # Changelog
 
-## Version 1.1 - Current Workflow
+All notable changes to this project are documented in this file.
 
-- Replaced classifier AI Agent plus Code node with a structured Information Extractor.
-- Added confidence-based automatic processing and human review.
-- Added Google Calendar appointment availability checking.
-- Added automatic calendar event creation for available slots.
-- Added alternative-slot generation for unavailable requests.
-- Added validation and selection of the best three alternative slots.
-- Added formatted alternative-slot email response.
-- Added appointment and cancellation missing-information handling.
-- Added clinic notifications and Google Sheets logging across operational branches.
-- Added retry-on-fail settings to AI-dependent nodes.
-- Added dedicated error workflow and error logging.
+---
 
-## Version 1.0
+## [1.1.0] - Latest
 
-- Initial Gmail trigger.
-- AI classification.
-- Appointment, cancellation, enquiry, job enquiry, and spam branches.
-- Basic email replies and Google Sheets logging.
+### Added
+- Added Gmail **Get Message** node to retrieve the full email body.
+- Improved workflow reliability by processing complete email content instead of Gmail snippets.
+
+### Improved
+- Updated Email Classifier prompt with clearer category definitions and confidence rules.
+- Updated Appointment Details Extraction prompt to process the full email body.
+- Updated FAQ Agent prompt to use the full email text.
+- Improved extraction accuracy for patient names, appointment reasons, dates, and times.
+- Refreshed prompt documentation to match the latest workflow implementation.
+
+### Fixed
+- Fixed missing patient information caused by using Gmail snippets instead of the complete email body.
+- Improved appointment classification reliability for realistic patient emails.
+
+---
+
+## [1.0.0]
+
+### Initial Release
+- AI-powered email classification.
+- Appointment scheduling.
+- Appointment cancellation.
+- FAQ handling.
+- Job enquiry handling.
+- Google Calendar integration.
+- Google Sheets logging.
+- Human review workflow.
+- Spam detection.
+- Automated confirmation emails.
