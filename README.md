@@ -64,7 +64,7 @@ Gmail Trigger
 
 ### Complete Workflow
 
-The complete n8n automation handles Gmail intake, AI classification, confidence-based routing, appointment scheduling, cancellations, FAQ enquiries, job enquiries, spam handling, Google Calendar integration, Google Sheets logging, and internal notifications.
+The complete n8n automation retrieves the full email content, classifies each email using AI, routes requests based on confidence, manages appointments and cancellations, answers FAQs, processes job enquiries, filters spam, integrates with Google Calendar and Google Sheets, and includes dedicated error handling for reliable operation.
 
 ![Complete Workflow](screenshots/main-workflow.png)
 
