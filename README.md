@@ -179,6 +179,7 @@ This automation is designed to reduce the administrative workload of dental clin
 
 - n8n
 - Gmail API
+- - Gmail Get Message (Full Email Retrieval)
 - Google Calendar API
 - Google Sheets API
 - Groq-compatible chat models
